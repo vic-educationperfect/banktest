@@ -13,7 +13,6 @@ export class TransactionHistoryService {
 
   getTransactionHistory(): Observable<Transaction[]> {
     return of(mockTransactionHistory).pipe(map(items => {
-      console.log(items, 'items')
       return items.sort((a, b) => +b.time - +a.time);
     }))
   }

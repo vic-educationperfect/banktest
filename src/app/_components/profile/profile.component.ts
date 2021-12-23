@@ -49,6 +49,10 @@ export class ProfileComponent implements OnInit {
   }
 
   onSubmit() {
+    if (this.profileForm.invalid) {
+      return;
+    }
+
     this.profileService.updateProfileInfo(this.profileForm.value).subscribe(_ => {
       this.router.navigate(['/profile']);
     })

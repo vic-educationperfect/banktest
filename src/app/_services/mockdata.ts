@@ -1,4 +1,5 @@
 import { Transaction } from "../_models/transaction";
+import { Account, Bank } from "../_models/transfer";
 
 export const mockIdentity = {
   token:
@@ -13,179 +14,214 @@ export const mockProfile = {
   mobilePhone: "0123456789",
   officePhone: "+84(24)123456",
   address: "Thanh Cong Building, 80 Dich Vong Hau str., Cau Giay dist., Ha Noi",
-}
+};
 
 export const mockTransactionHistory: Transaction[] = [
   {
     time: randomDate(new Date(2021, 0, 1), new Date()),
     receiptNo: Math.floor(Math.random() * 1000000),
     amount: Math.floor(Math.random() * 1000000),
-    description: 'Description Description Description Description '
+    description: "Description Description Description Description ",
   },
   {
     time: randomDate(new Date(2021, 0, 1), new Date()),
     receiptNo: Math.floor(Math.random() * 1000000),
     amount: Math.floor(Math.random() * 1000000),
-    description: 'Description Description 123 '
+    description: "Description Description 123 ",
   },
   {
     time: randomDate(new Date(2021, 0, 1), new Date()),
     receiptNo: Math.floor(Math.random() * 1000000),
     amount: Math.floor(Math.random() * 1000000),
-    description: 'Description Description 456 '
+    description: "Description Description 456 ",
   },
   {
     time: randomDate(new Date(2021, 0, 1), new Date()),
     receiptNo: Math.floor(Math.random() * 1000000),
     amount: Math.floor(Math.random() * 1000000),
-    description: 'Description Description '
+    description: "Description Description ",
   },
   {
     time: randomDate(new Date(2021, 0, 1), new Date()),
     receiptNo: Math.floor(Math.random() * 1000000),
     amount: Math.floor(Math.random() * 1000000),
-    description: 'Description Description Description '
+    description: "Description Description Description ",
   },
   {
     time: randomDate(new Date(2021, 0, 1), new Date()),
     receiptNo: Math.floor(Math.random() * 1000000),
     amount: Math.floor(Math.random() * 1000000),
-    description: 'Description Description Description '
+    description: "Description Description Description ",
   },
   {
     time: randomDate(new Date(2021, 0, 1), new Date()),
     receiptNo: Math.floor(Math.random() * 1000000),
     amount: Math.floor(Math.random() * 1000000),
-    description: 'Description Description Description 1 '
+    description: "Description Description Description 1 ",
   },
   {
     time: randomDate(new Date(2021, 0, 1), new Date()),
     receiptNo: Math.floor(Math.random() * 1000000),
     amount: Math.floor(Math.random() * 1000000),
-    description: 'Description Description Description 2 '
+    description: "Description Description Description 2 ",
   },
   {
     time: randomDate(new Date(2021, 0, 1), new Date()),
     receiptNo: Math.floor(Math.random() * 1000000),
     amount: Math.floor(Math.random() * 1000000),
-    description: 'Description Description Description 3 '
+    description: "Description Description Description 3 ",
   },
   {
     time: randomDate(new Date(2021, 0, 1), new Date()),
     receiptNo: Math.floor(Math.random() * 1000000),
     amount: Math.floor(Math.random() * 1000000),
-    description: 'Description Description Description 4 '
+    description: "Description Description Description 4 ",
   },
   {
     time: randomDate(new Date(2021, 0, 1), new Date()),
     receiptNo: Math.floor(Math.random() * 1000000),
     amount: Math.floor(Math.random() * 1000000),
-    description: 'Description Description Description 5 '
+    description: "Description Description Description 5 ",
   },
   {
     time: randomDate(new Date(2021, 0, 1), new Date()),
     receiptNo: Math.floor(Math.random() * 1000000),
     amount: Math.floor(Math.random() * 1000000),
-    description: 'Description Description Description 6 '
+    description: "Description Description Description 6 ",
   },
   {
     time: randomDate(new Date(2021, 0, 1), new Date()),
     receiptNo: Math.floor(Math.random() * 1000000),
     amount: Math.floor(Math.random() * 1000000),
-    description: 'Description Description Description 7 '
+    description: "Description Description Description 7 ",
   },
   {
     time: randomDate(new Date(2021, 0, 1), new Date()),
     receiptNo: Math.floor(Math.random() * 1000000),
     amount: Math.floor(Math.random() * 1000000),
-    description: 'Description Description Description 8 '
+    description: "Description Description Description 8 ",
   },
   {
     time: randomDate(new Date(2021, 0, 1), new Date()),
     receiptNo: Math.floor(Math.random() * 1000000),
     amount: Math.floor(Math.random() * 1000000),
-    description: 'Description Description Description 9 '
+    description: "Description Description Description 9 ",
   },
   {
     time: randomDate(new Date(2021, 0, 1), new Date()),
     receiptNo: Math.floor(Math.random() * 1000000),
     amount: Math.floor(Math.random() * 1000000),
-    description: 'Description Description Description 10 '
+    description: "Description Description Description 10 ",
   },
   {
     time: randomDate(new Date(2021, 0, 1), new Date()),
     receiptNo: Math.floor(Math.random() * 1000000),
     amount: Math.floor(Math.random() * 1000000),
-    description: 'Description Description Description 11 '
+    description: "Description Description Description 11 ",
   },
   {
     time: randomDate(new Date(2021, 0, 1), new Date()),
     receiptNo: Math.floor(Math.random() * 1000000),
     amount: Math.floor(Math.random() * 1000000),
-    description: 'Description Description Description 12 '
+    description: "Description Description Description 12 ",
   },
   {
     time: randomDate(new Date(2021, 0, 1), new Date()),
     receiptNo: Math.floor(Math.random() * 1000000),
     amount: Math.floor(Math.random() * 1000000),
-    description: 'Description Description Description 13 '
+    description: "Description Description Description 13 ",
   },
   {
     time: randomDate(new Date(2021, 0, 1), new Date()),
     receiptNo: Math.floor(Math.random() * 1000000),
     amount: Math.floor(Math.random() * 1000000),
-    description: 'Description Description Description 14 '
+    description: "Description Description Description 14 ",
   },
   {
     time: randomDate(new Date(2021, 0, 1), new Date()),
     receiptNo: Math.floor(Math.random() * 1000000),
     amount: Math.floor(Math.random() * 1000000),
-    description: 'Description Description Description 15 '
+    description: "Description Description Description 15 ",
   },
   {
     time: randomDate(new Date(2021, 0, 1), new Date()),
     receiptNo: Math.floor(Math.random() * 1000000),
     amount: Math.floor(Math.random() * 1000000),
-    description: 'Description Description Description 16 '
+    description: "Description Description Description 16 ",
   },
   {
     time: randomDate(new Date(2021, 0, 1), new Date()),
     receiptNo: Math.floor(Math.random() * 1000000),
     amount: Math.floor(Math.random() * 1000000),
-    description: 'Description Description Description 17 '
+    description: "Description Description Description 17 ",
   },
   {
     time: randomDate(new Date(2021, 0, 1), new Date()),
     receiptNo: Math.floor(Math.random() * 1000000),
     amount: Math.floor(Math.random() * 1000000),
-    description: 'Description Description Description 18 '
+    description: "Description Description Description 18 ",
   },
   {
     time: randomDate(new Date(2021, 0, 1), new Date()),
     receiptNo: Math.floor(Math.random() * 1000000),
     amount: Math.floor(Math.random() * 1000000),
-    description: 'Description Description Description Description '
+    description: "Description Description Description Description ",
   },
   {
     time: randomDate(new Date(2021, 0, 1), new Date()),
     receiptNo: Math.floor(Math.random() * 1000000),
     amount: Math.floor(Math.random() * 1000000),
-    description: 'Description Description Description Description '
+    description: "Description Description Description Description ",
   },
   {
     time: randomDate(new Date(2021, 0, 1), new Date()),
     receiptNo: Math.floor(Math.random() * 1000000),
     amount: Math.floor(Math.random() * 1000000),
-    description: 'Description Description Description Description '
+    description: "Description Description Description Description ",
   },
   {
     time: randomDate(new Date(2021, 0, 1), new Date()),
     receiptNo: Math.floor(Math.random() * 1000000),
     amount: Math.floor(Math.random() * 1000000),
-    description: 'Description Description Description Description '
+    description: "Description Description Description Description ",
   },
-]
+];
 
 function randomDate(start: Date, end: Date) {
-  return new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
+  return new Date(
+    start.getTime() + Math.random() * (end.getTime() - start.getTime())
+  );
 }
+
+export const accounts: Account[] = [
+  { accountNumber: 123456, name: "Hoang Hoang QUang", amount: 1000 },
+  { accountNumber: 654321, name: "Hoang Hoang Quang 1", amount: 1234 },
+];
+
+export const banks: Bank[] = [
+  {
+    id: 1,
+    shortName: "TPB",
+    fullName: "Tien Phong Bank"
+  },
+  {
+    id: 2,
+    shortName: "CITI",
+    fullName: "CITI Bank"
+  },
+  {
+    id: 3,
+    shortName: "HSBC",
+    fullName: "The Hongkong and Shanghai Bank"
+  },
+  {
+    id: 4,
+    shortName: "MB",
+    fullName: "Malaysia Bank"
+  },
+  {
+    id: 5,
+    shortName: "TCB",
+    fullName: "Techcom Bank"
+  },
+]

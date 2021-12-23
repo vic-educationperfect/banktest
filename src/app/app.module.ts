@@ -27,6 +27,7 @@ import { NavigationComponent } from './_components/navigation/navigation.compone
 import { HomeComponent } from './_components/home/home.component';
 import { ProfileComponent } from './_components/profile/profile.component';
 import { TransactionHistoryComponent } from './_components/transaction-history/transaction-history.component';
+import { TransferMoneyComponent } from './_components/transfer-money/transfer-money.component';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { TransactionHistoryComponent } from './_components/transaction-history/t
     NavigationComponent,
     HomeComponent,
     ProfileComponent,
-    TransactionHistoryComponent
+    TransactionHistoryComponent,
+    TransferMoneyComponent
   ],
   imports: [
     BrowserModule,

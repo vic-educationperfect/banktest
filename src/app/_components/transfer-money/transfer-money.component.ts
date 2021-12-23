@@ -12,7 +12,7 @@ import { TransferService } from "../../_services/transfer.service";
 })
 export class TransferMoneyComponent implements OnInit {
   accounts: Account[] = [];
-  banks: Bank[] = []
+  banks: Bank[] = [];
   currentBalance: number;
   transferMoneyForm = new FormGroup({
     fromAccountNumber: new FormControl("", Validators.required),
@@ -44,10 +44,10 @@ export class TransferMoneyComponent implements OnInit {
         this.currentBalance = accounts[0].amount;
       }
     });
-    
+
     this.transferService.getBeneficiaryBankList().subscribe((banks) => {
       this.banks = banks;
-    })
+    });
   }
 
   onAccountChange(account: MatSelectChange) {
@@ -62,10 +62,12 @@ export class TransferMoneyComponent implements OnInit {
     }
 
     const data: TransferMoneyRequest = this.transferMoneyForm.value;
-    this.transferService.transferMoney(data).subscribe(res => {
+    this.transferService.transferMoney(data).subscribe((res) => {
       if (res) {
-        this._snackBar.open('Transfer successful');
-        this.router.navigate(['/']);
+        this._snackBar.open("Transfer successful", "Close", {
+          duration: 3000,
+        });
+        this.router.navigate(["/"]);
       }
     });
   }

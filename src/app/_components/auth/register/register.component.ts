@@ -23,7 +23,7 @@ export class RegisterComponent {
 
       // if not errors - navigate to home
       if(!this.warningMessage) {
-        this.router.navigate(['home']);
+        this.router.navigate(['/profile']);
       }
     }, error => {
       this.warningMessage = "Invalid Credentials!";

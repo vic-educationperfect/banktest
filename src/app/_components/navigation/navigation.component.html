@@ -4,7 +4,8 @@
 
   <div id="mySidenav" class="sidenav" [style.width]="isOpenNav?'250px':'0px'">
       <a (click)="isOpenNav = !isOpenNav" [routerLink]="['/']">Home</a>
-      <a (click)="isOpenNav = !isOpenNav" [routerLink]="['/dummies']">Dummy</a>
+      <a (click)="isOpenNav = !isOpenNav" [routerLink]="['/profile']">Profile</a>
+      <a (click)="isOpenNav = !isOpenNav" [routerLink]="['/transaction']">Transaction History</a>
       <a (click)="logout();">Logout</a>
   </div>
 </div>

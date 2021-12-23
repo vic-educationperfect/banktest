@@ -28,25 +28,25 @@ export class AllDummyComponent implements OnInit {
 	}
 
 	all() {
-    	this.ProfileService.all(this.pageNo, this.keyword, this.perPage, this.sortBy, this.orderBy).subscribe(res => {
-    		this.paginate = res['dummies'];
-    		this.dummies = res['dummies'].data;
-    		this.paginate.pages = this.createArray(1, this.paginate.last_page);
-	    }, error => {
-	    	// for testing 
-    		this.dummies = [{unique_column:1, column_1:'Value 1', column_2:'Value 2', column_3:'Value 3'}];
-	    	console.error(error);
-	    });
+    	// this.ProfileService.all(this.pageNo, this.keyword, this.perPage, this.sortBy, this.orderBy).subscribe(res => {
+    	// 	this.paginate = res['dummies'];
+    	// 	this.dummies = res['dummies'].data;
+    	// 	this.paginate.pages = this.createArray(1, this.paginate.last_page);
+	    // }, error => {
+	    // 	// for testing 
+    	// 	this.dummies = [{unique_column:1, column_1:'Value 1', column_2:'Value 2', column_3:'Value 3'}];
+	    // 	console.error(error);
+	    // });
     }
 
     destroy(unique_column) {
-    	if(confirm('Are you Sure ?')) {
-    		this.ProfileService.destroy(unique_column).subscribe(res => {
+    	// if(confirm('Are you Sure ?')) {
+    	// 	this.ProfileService.destroy(unique_column).subscribe(res => {
 	    		
-		    }, error => {
-		    	console.error(error);
-		    });
-    	}	
+		  //   }, error => {
+		  //   	console.error(error);
+		  //   });
+    	// }	
     }
 
     sortResults(sortBy) {

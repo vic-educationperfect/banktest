@@ -1,6 +1,9 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { environment } from "../../environments/environment";
+import { Observable, of } from "rxjs";
+import { mockProfile } from "./mockdata";
+import { Profile } from "../_models/profile";
 
 @Injectable()
 export class ProfileService {
@@ -10,22 +13,12 @@ export class ProfileService {
 
   constructor(public http: HttpClient) {}
 
-  all(pageNo, keyword, perPage, sortBy, orderBy) {
-    return this.http.get(
-      this.apiUrl +
-        "/" +
-        this.module +
-        "?page=" +
-        pageNo +
-        "&keyword=" +
-        keyword +
-        "&per_page=" +
-        keyword +
-        "&sort_by=" +
-        keyword +
-        "&order_by" +
-        keyword
-    );
+  getProfileInfo(): Observable<Profile> {
+    return of(mockProfile)
+  }
+
+  updateProfileInfo(data: Profile): Observable<unknown> {
+    return of(true);
   }
 
   create() {
@@ -46,9 +39,5 @@ export class ProfileService {
 
   update(id, obj) {
     return this.http.patch(this.apiUrl + "/" + this.module + "/" + id, obj);
-  }
-
-  destroy(id) {
-    return this.http.delete(this.apiUrl + "/" + this.module + "/" + id);
   }
 }

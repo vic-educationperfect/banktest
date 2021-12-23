@@ -26,6 +26,7 @@ import { LoginComponent, RegisterComponent } from './_components/auth/index';
 import { NavigationComponent } from './_components/navigation/navigation.component';
 import { HomeComponent } from './_components/home/home.component';
 import { ProfileComponent } from './_components/profile/profile.component';
+import { TransactionHistoryComponent } from './_components/transaction-history/transaction-history.component';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { ProfileComponent } from './_components/profile/profile.component';
     RegisterComponent,
     NavigationComponent,
     HomeComponent,
-    ProfileComponent
+    ProfileComponent,
+    TransactionHistoryComponent
   ],
   imports: [
     BrowserModule,

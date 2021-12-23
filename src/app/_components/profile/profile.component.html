@@ -1,3 +1,116 @@
-<p>
-  profile works!
-</p>
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="row justify-content-center">
+      <div *ngIf="profile" class="col-md-10">
+        <div class="card">
+          <div class="card-header card-header-danger">
+            <h4 class="card-title d-flex justify-content-between">
+              <div>
+                {{ profile.name }}
+              </div>
+              <div *ngIf="mode === ViewMode.View">
+                <button
+                  (click)="updateProfile()"
+                  mat-raised-button
+                  type="submit"
+                  class="btn btn-danger pull-right"
+                >
+                  Update Profile
+                </button>
+              </div>
+            </h4>
+          </div>
+          <div class="card-body">
+            <form (ngSubmit)="onSubmit()" [formGroup]="profileForm" *ngIf="mode === ViewMode.Edit">
+              <div class="row">
+                <div class="col-md-12 mb-3 title">
+                  Email
+                </div>
+                <div class="col-md-6 d-flex">
+                  <mat-form-field class="w-100">
+                    <input [required]="true" formControlName="primaryEmail" matInput placeholder="Primary Email" />
+                  </mat-form-field>
+                </div>
+                <div class="col-md-6 d-flex">
+                  <mat-form-field class="w-100">
+                    <input [required]="true" formControlName="secondaryEmail" matInput placeholder="Secondary Email" />
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12 mb-3 title">
+                  Contact number
+                </div>
+                <div class="col-md-6 d-flex">
+                  <mat-form-field class="w-100">
+                    <input [required]="true" formControlName="mobilePhone" matInput placeholder="Mobile Phone" />
+                  </mat-form-field>
+                </div>
+                <div class="col-md-6 d-flex">
+                  <mat-form-field class="w-100">
+                    <input [required]="true" formControlName="officePhone" matInput placeholder="Office Phone" />
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12 mb-3 title">
+                  Address
+                </div>
+                <div class="col-md-12 d-flex">
+                  <mat-form-field class="w-100">
+                    <input [required]="true" formControlName="address" matInput placeholder="Primary Email" />
+                  </mat-form-field>
+                </div>
+              </div>
+
+              <button
+                mat-raised-button
+                type="submit"
+                class="btn btn-danger pull-right"
+              >
+                Update
+              </button>
+              <div class="clearfix"></div>
+            </form>
+            <ng-container *ngIf="mode === ViewMode.View">
+              <div class="row">
+                <div class="col-md-12 mb-3 title">
+                  Email
+                </div>
+                <div class="col-md-6 d-flex">
+                  <div class="label">Primary Email:</div>
+                  <div class="value">{{ profile.primaryEmail }}</div>
+                </div>
+                <div class="col-md-6 d-flex">
+                  <div class="label">Secondary Email:</div>
+                  <div class="value">{{ profile.secondaryEmail }}</div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12 mb-3 mt-3 title">
+                  Contact number
+                </div>
+                <div class="col-md-6 d-flex">
+                  <div class="label">Mobile Phone number:</div>
+                  <div class="value">{{ profile.mobilePhone }}</div>
+                </div>
+                <div class="col-md-6 d-flex">
+                  <div class="label">Office Phone number:</div>
+                  <div class="value">{{ profile.officePhone }}</div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12 mb-3 mt-3 title">
+                  Address
+                </div>
+                <div class="col-md-12 d-flex">
+                  <div class="value">{{ profile.address }}</div>
+                </div>
+              </div>
+            </ng-container>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

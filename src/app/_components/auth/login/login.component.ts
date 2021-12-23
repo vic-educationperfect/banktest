@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
       } 
       // if not errors - navigate to home
       if(!this.warningMessage)
-        this.router.navigate(['/']);
+        this.router.navigate(['/profile']);
     }, error => {
       this.warningMessage = "Invalid Credentials!";
       console.error(error);

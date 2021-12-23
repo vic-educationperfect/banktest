@@ -13,11 +13,6 @@
           <mat-form-field>
             <input matInput [(ngModel)]="password" name="password" required="required" pattern=".{6,30}" type="password" placeholder="Password" />
           </mat-form-field>
-          <a class="link" 
-            [routerLink]="['/forgot-password']" 
-            routerLinkActive="link-active">
-            <span>Forgot password?</span>
-          </a>
           <hr />
           <div *ngIf="warningMessage">
             <mat-icon>warning</mat-icon>
